@@ -1,6 +1,6 @@
 {
   "name": "@fern-api/next",
-  "version": "14.2.9-fork.1",
+  "version": "14.2.9-fork.2",
   "description": "The React Framework",
   "main": "./dist/server/next.js",
   "license": "MIT",
