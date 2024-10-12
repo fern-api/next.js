@@ -1739,6 +1739,10 @@ export default class Router implements BaseRouter {
           routeInfo.props.pageProps.statusCode = 500
         }
 
+        if (this.pathname === '/404' && process.env.__NEXT_HARD_NAVIGATE_404) {
+          handleHardNavigation({ url: as, router: this })
+        }
+
         try {
           await this.set(upcomingRouterState, routeInfo, upcomingScrollState)
         } catch (err) {

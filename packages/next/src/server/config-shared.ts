@@ -215,6 +215,7 @@ export interface ExperimentalConfig {
   swrDelta?: SwrDelta
   middlewarePrefetch?: 'strict' | 'flexible'
   manualClientBasePath?: boolean
+  hardNavigate404?: boolean
   /**
    * CSS Chunking strategy. Defaults to 'loose', which guesses dependencies
    * between CSS files to keep ordering of them.
@@ -893,6 +894,7 @@ export const defaultConfig: NextConfig = {
     optimisticClientCache: true,
     swrDelta: undefined,
     manualClientBasePath: false,
+    hardNavigate404: false,
     cpus: Math.max(
       1,
       (Number(process.env.CIRCLE_NODE_TOTAL) ||

@@ -171,6 +171,8 @@ export function getDefineEnv({
     'process.env.__NEXT_MIDDLEWARE_MATCHERS': middlewareMatchers ?? [],
     'process.env.__NEXT_MANUAL_CLIENT_BASE_PATH':
       config.experimental.manualClientBasePath ?? false,
+    'process.env.__NEXT_HARD_NAVIGATE_404':
+      config.experimental.hardNavigate404 ?? false,
     'process.env.__NEXT_CLIENT_ROUTER_DYNAMIC_STALETIME': JSON.stringify(
       isNaN(Number(config.experimental.staleTimes?.dynamic))
         ? 30 // 30 seconds
